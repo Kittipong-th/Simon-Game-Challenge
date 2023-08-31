@@ -4,6 +4,7 @@ let userClickedPattern = [];
 let started = false;
 let level = 0;
 
+//random color of game patterns
 nextSequence = () => {
   userClickedPattern = [];
   level++;
@@ -31,6 +32,7 @@ animatePress = (currentColor) => {
   }, 100);
 };
 
+//Check answers user and game pattern
 checkAnswer = (currentLevel) => {
   console.log(userClickedPattern);
   if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
@@ -51,6 +53,7 @@ checkAnswer = (currentLevel) => {
   }
 };
 
+//Reset values when game over
 gameOver = () => {
   $("h1").text("Game Over,Press A restart");
   level = 0;
